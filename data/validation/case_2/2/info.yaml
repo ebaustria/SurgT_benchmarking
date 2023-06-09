@@ -1,0 +1,8 @@
+video_stack: "vertical"
+name_video: "video.mp4"
+name_calib: "calibration.yaml"
+name_ground_truth: ["gt_rectified_0.yaml"]
+resolution:
+          width : 1280 # pixels
+          height: 1024 # pixels
+description: "invivo porcine abdominal procedures"

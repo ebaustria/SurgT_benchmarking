@@ -1,0 +1,8 @@
+video_stack: "horizontal"
+name_video: "video.avi"
+name_calib: "calibration.yaml"
+name_ground_truth: ["gt_rectified_0.yaml"]
+resolution:
+          width : 360 # pixels
+          height: 288 # pixels
+description: "invivo human robotic assisted totally endoscopic coronary artery bypass graf (TECAB)"

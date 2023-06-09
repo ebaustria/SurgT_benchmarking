@@ -1,0 +1,8 @@
+video_stack: "horizontal"
+name_video: "video.avi"
+name_calib: "calibration.yaml"
+name_ground_truth: ["gt_rectified_0.yaml"]
+resolution:
+          width : 480 # pixels
+          height: 270 # pixels
+description: "invivo human robotic assisted partial nephrectomy (RPN)"

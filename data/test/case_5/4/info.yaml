@@ -1,0 +1,8 @@
+video_stack: "horizontal"
+name_video: "video.avi"
+name_calib: "calibration.yaml"
+name_ground_truth: ["gt_rectified_0.yaml"]
+resolution:
+          width : 720 # pixels
+          height: 288 # pixels
+video_type: "invivo porcine general camera motion in abdomen with tissue-tool interaction"

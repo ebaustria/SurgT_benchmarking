@@ -6,8 +6,12 @@ class Tracker:
     def __init__(self, init_im1, init_im2, init_bbox1, init_bbox2):
         self.t1 = cv.TrackerCSRT_create() # Track bbox on left image
         self.t2 = cv.TrackerCSRT_create() # Track bbox on right image
-        self.t1.init(init_im1, init_bbox1)
-        self.t2.init(init_im2, init_bbox2)
+        self.bBoxFile = open('/home/himanshukaloni/KP_CARS/OSTrack/output/test/tracking_results/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/video_video.txt', 'r')
+        bboxList = self.bBoxFile.readline().rstrip().split('\t')
+        bboxList = [eval(i) for i in bboxList]
+        bbox = tuple(bboxList)
+        self.t1.init(init_im1, bbox)
+        self.t2.init(init_im2, bbox)
 
 
     def tracker_update(self, new_im1, new_im2):
@@ -41,4 +45,7 @@ class Tracker:
               code detects that the tracker is failing (bbox far away from the ground-truth one)
               for more than N successive frames.  
         """
-        return bbox1, bbox2
+        bboxList = self.bBoxFile.readline().rstrip().split('\t')
+        bboxList = [eval(i) for i in bboxList]
+        bbox = tuple(bboxList)
+        return bbox, bbox
